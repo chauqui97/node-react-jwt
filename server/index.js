@@ -7,6 +7,13 @@ const pool = require("./db");
 app.use(express.json()) // req.body
 app.use(cors());
 
+// Register and login routes
+app.use("/auth", require("./routes/jwtAuth"));
+
+// Dashboard
+app.use("/dashboard", require("./routes/dashboard"));
+
+// TODO
 app.get('/', (req, res) => {
     res.send('Hello World!');
 })

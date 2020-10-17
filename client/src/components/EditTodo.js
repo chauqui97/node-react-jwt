@@ -20,33 +20,33 @@ const EditTodo = ({ todo }) => {
     return (
         <Fragment>
             <button type="button"
-                class="btn btn-primary"
+                className="btn btn-primary"
                 data-toggle="modal"
                 data-target={`#id${todo.id}`}>Edit</button>
-            <div id={`id${todo.id}`} class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Edit Todo</h4>
+            <div id={`id${todo.id}`} className="modal fade" role="dialog">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h4 className="modal-title">Edit Todo</h4>
                             <button type="button"
                                 onClick={() => setDescription(todo.description)}
-                                class="close"
+                                className="close"
                                 data-dismiss="modal">&times;</button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <input type="text"
                                 value={description}
                                 onChange={e => setDescription(e.target.value)}
                                 className="form-control" />
                         </div>
-                        <div class="modal-footer">
+                        <div className="modal-footer">
                             <button type="button"
-                                class="btn btn-primary"
+                                className="btn btn-primary"
                                 data-dismiss="modal"
                                 onClick={() => updateTodo(todo.id)}
                             >Edit</button>
                             <button type="button"
-                                class="btn btn-default"
+                                className="btn btn-default"
                                 data-dismiss="modal"
                                 onClick={() => setDescription(todo.description)}
                             >Close</button>
