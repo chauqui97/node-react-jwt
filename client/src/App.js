@@ -80,8 +80,6 @@ function App() {
             </Switch>
           </div>
         </Router>
-        {/* <InputTodo />
-        <ListTodo /> */}
       </div>
     </Fragment>
   );

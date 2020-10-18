@@ -1,5 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import InputTodo from "./InputTodo";
+import ListTodo from "./ListTodos";
 
 const Dashboard = ({ setAuth }) => {
   const [name, setName] = useState("");
@@ -28,15 +30,17 @@ const Dashboard = ({ setAuth }) => {
   };
   return (
     <Fragment>
-      <h1 className="my-3">{name}</h1>
+      <h1>{name}</h1>
       <button
-        className="btn btn-warning"
+        className="btn btn-warning my-3"
         onClick={(e) => {
           logout(e);
         }}
       >
         Logout
       </button>
+      <InputTodo />
+      <ListTodo />
     </Fragment>
   );
 };
